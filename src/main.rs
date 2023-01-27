@@ -14,4 +14,9 @@ fn main() {
 
     let name = read_file::read(p);
     println!("The name is {}", name.unwrap());
+
+    let info = read_file::get_files(&dir);
+
+    println!("info = {:?}", info.unwrap());
+
 }
