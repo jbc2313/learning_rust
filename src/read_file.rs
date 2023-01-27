@@ -8,14 +8,14 @@ type FileResult = Result<String, std::io::Error>;
 
 #[derive(Debug)]
 pub struct DirElement {
-    name: String,
-    file: Option<PathBuf>,
+    pub name: String,
+    pub file: Option<PathBuf>,
 }
 
 #[derive(Debug)]
 pub struct Directory {
-    name: String,
-    dir: Option<PathBuf>,
+    pub name: String,
+    pub dir: Option<PathBuf>,
 }
 
 pub fn read(path: PathBuf) -> FileResult {

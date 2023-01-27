@@ -17,6 +17,19 @@ fn main() {
 
     let info = read_file::get_files(&dir);
 
-    println!("info = {:?}", info.unwrap());
+    //println!("info = {:?}", info.as_ref().unwrap());
+
+    let mut file_names: Vec<&String> = Vec::new();
+    
+    for entry in info.iter() {
+        println!("Entry: {:?}", entry);
+        for el in entry {
+           println!("El: {:?}", el);
+           file_names.push(&el.name); 
+        }
+    }
+    
+    println!("File Names: {:?}", file_names);
+
 
 }
