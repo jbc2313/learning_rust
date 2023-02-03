@@ -1,10 +1,7 @@
-
 use std::path::PathBuf;
 use std::fs;
 
-
 type FileResult = Result<String, std::io::Error>;
-
 
 #[derive(Debug)]
 pub struct DirElement {
